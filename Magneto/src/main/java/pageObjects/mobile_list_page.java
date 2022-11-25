@@ -38,6 +38,20 @@ public class mobile_list_page {
 	@CacheLookup
 	WebElement dropDown_SortBy;
 	
+	@FindBy(xpath="//a[@title='Sony Xperia']")
+	@CacheLookup
+	WebElement link_txt_sonyXperia;
+	
+	@FindBy(xpath="//span[@id='product-price-1']")
+	@CacheLookup
+	WebElement getTxt_SonyXperiaPrice;
+	
+	@FindBy(xpath="//span[@id='product-price-1']//span")
+	@CacheLookup
+	WebElement getTxt_detailPgaePriceofSonyxperia;
+	
+	
+	
 	public void GetTheTitleofThePage() {
 		String Title=getTxt_Title.getText();
 		System.out.println(Title);
@@ -58,6 +72,24 @@ public class mobile_list_page {
 	
 	public void VerifyAllProductsSortedByname() throws IOException {
 		ss.takeTheScreenshot();
+	}
+	
+	public void getTheTxtOfSonyXperia() {
+		String txt=link_txt_sonyXperia.getText();
+		System.out.println(txt);
+		
+	}
+	
+	public String getTePriceOfSonyXperia() {
+		return getTxt_SonyXperiaPrice.getText();
+	}
+	
+	public void clickOnsonyXperia() {
+		link_txt_sonyXperia.click();
+	}
+	
+	public String getThepriceInDetilpageOfSonyXperia() {
+		return getTxt_detailPgaePriceofSonyxperia.getText();
 	}
 
 }
