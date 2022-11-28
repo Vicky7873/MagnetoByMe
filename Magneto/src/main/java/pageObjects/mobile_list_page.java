@@ -50,6 +50,10 @@ public class mobile_list_page {
 	@CacheLookup
 	WebElement getTxt_detailPgaePriceofSonyxperia;
 	
+	@FindBy(xpath="//li[3]//div[1]//div[3]//button[1]")
+	@CacheLookup
+	WebElement btn_add_to_cart_SonyExperia;
+	
 	
 	
 	public void GetTheTitleofThePage() {
@@ -90,6 +94,10 @@ public class mobile_list_page {
 	
 	public String getThepriceInDetilpageOfSonyXperia() {
 		return getTxt_detailPgaePriceofSonyxperia.getText();
+	}
+	
+	public void clickOnAddToCart() {
+		btn_add_to_cart_SonyExperia.click();
 	}
 
 }
