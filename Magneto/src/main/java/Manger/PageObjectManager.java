@@ -2,6 +2,7 @@ package Manger;
 
 import org.openqa.selenium.WebDriver;
 
+import pageObjects.ComparePage;
 import pageObjects.DetailPage;
 import pageObjects.mobile_list_page;
 
@@ -20,6 +21,11 @@ public class PageObjectManager {
 	DetailPage dp;
 	public DetailPage getTheDetailsPage() {
 		return (dp==null)?new DetailPage(driver):dp;
+	}
+	
+	ComparePage cp;
+	public ComparePage getTheComparePAge() {
+		return(cp==null)?new ComparePage(driver):cp;
 	}
 
 }

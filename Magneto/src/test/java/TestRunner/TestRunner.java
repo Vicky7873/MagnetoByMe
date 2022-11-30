@@ -7,8 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features=".//Functional_TC/Magneto_TC_3.feature",
-		glue="step"
+		features=".//Functional_TC/Magneto_TC_4.feature",
+		glue="step",
+		dryRun=false
 		)
 
 public class TestRunner {
