@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features=".//Functional_TC/Magneto_TC_4.feature",
+		features=".//Functional_TC/Magneto_TC_5.feature",
 		glue="step",
 		dryRun=false
 		)

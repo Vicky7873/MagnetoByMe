@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import pageObjects.ComparePage;
 import pageObjects.DetailPage;
+import pageObjects.RegisterPage;
 import pageObjects.mobile_list_page;
 
 public class PageObjectManager {
@@ -26,6 +27,11 @@ public class PageObjectManager {
 	ComparePage cp;
 	public ComparePage getTheComparePAge() {
 		return(cp==null)?new ComparePage(driver):cp;
+	}
+	
+	RegisterPage rp;
+	public RegisterPage getTheRegistrePage() {
+		return (rp==null)?new RegisterPage(driver):rp;
 	}
 
 }
