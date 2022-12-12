@@ -18,5 +18,8 @@ public class randomClass {
 		String random=RandomStringUtils.randomAlphabetic(5);
 		return random+"@gmail.com";
 	}
-
+	
+	public static String username="";
+	public static String password="";
+	public static String emailID="";
 }

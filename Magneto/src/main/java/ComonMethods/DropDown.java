@@ -4,9 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class DropDown {
-	
+	Select ss;
 	public void SelectByVisbleText(WebElement element,String name) throws Exception {
-		Select ss=new Select(element);
+		ss=new Select(element);
 		try {
 			ss.selectByVisibleText(name);
 		}
@@ -15,5 +15,14 @@ public class DropDown {
 		}
 		
 	}
-
+	
+	public void SelectByValue(WebElement element, String value) {
+		ss=new Select(element);
+		ss.selectByValue(value);
+	}
+	
+	public void SelectByIndex(WebElement element, int index) {
+		ss=new Select(element);
+		ss.selectByIndex(index);
+}
 }

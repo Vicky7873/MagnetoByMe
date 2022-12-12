@@ -2,6 +2,7 @@ package Manger;
 
 import org.openqa.selenium.WebDriver;
 
+import pageObjects.BillingPage;
 import pageObjects.ComparePage;
 import pageObjects.DetailPage;
 import pageObjects.RegisterPage;
@@ -32,6 +33,11 @@ public class PageObjectManager {
 	RegisterPage rp;
 	public RegisterPage getTheRegistrePage() {
 		return (rp==null)?new RegisterPage(driver):rp;
+	}
+	
+	BillingPage bp;
+	public BillingPage getTheBillingPage() {
+		return (bp==null)?new BillingPage(driver):bp;
 	}
 
 }

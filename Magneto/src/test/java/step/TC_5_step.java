@@ -26,9 +26,15 @@ public class TC_5_step {
 	@Then("Click create Account link and fill new user information {string},{string},{string},{string},{string}")
 	public void click_create_account_link_and_fill_new_user_information(String fn, String ln, String email, String psw, String cnfpsw) {
 	    rp.clickOnCreateAnAccount();
-		rp.EnterTheCredentials(fn+rc.SetTheRandomInt(), 
+	    rc.username=fn+rc.SetTheRandomInt();
+	    rc.password=psw;
+	    rc.emailID=email+rc.SetTheRandomEmail();
+	    System.out.println(rc.emailID);
+	    System.out.println(rc.username);
+	    System.out.println(rc.password);
+		rp.EnterTheCredentials(rc.username, 
 	    		ln+rc.SetTheRandomInt(), 
-	    		email+rc.SetTheRandomEmail(), 
+	    		rc.emailID, 
 	    		psw, 
 	    		cnfpsw);
 	    
